@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Heart Movement - Touching Lives</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/cover\ 1.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .gallery-item {
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-amber-600 text-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-heart text-2xl"></i>
+                <a href="#home" class="text-xl font-bold">Golden Heart Movement</a>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-amber-200 transition">Home</a>
+                <a href="#about" class="hover:text-amber-200 transition">About Us</a>
+                <a href="#programs" class="hover:text-amber-200 transition">Programs</a>
+                <a href="#team" class="hover:text-amber-200 transition">Team</a>
+                <a href="#gallery" class="hover:text-amber-200 transition">Gallery</a>
+                <a href="#contact" class="hover:text-amber-200 transition">Contact</a>
+                <a href="#homes" class="hover:text-amber-200 transition">Homes Visited</a>
+                <a href="#donate" class="hover:text-amber-200 transition">Donate</a>
+            </div>
+            <button class="md:hidden text-xl" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-amber-700" id="mobile-menu">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#home" class="py-2 hover:text-amber-200 transition">Home</a>
+                <a href="#about" class="py-2 hover:text-amber-200 transition">About Us</a>
+                <a href="#programs" class="py-2 hover:text-amber-200 transition">Programs</a>
+                <a href="#team" class="py-2 hover:text-amber-200 transition">Team</a>
+                <a href="#gallery" class="py-2 hover:text-amber-200 transition">Gallery</a>
+                <a href="#contact" class="py-2 hover:text-amber-200 transition">Contact</a>
+                <a href="#homes" class="hover:text-amber-200 transition">Homes Visited</a>
+                <a href="#donate" class="py-2 hover:text-amber-200 transition">Donate</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-20 md:py-32 flex items-center">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Golden Heart Movement</h1>
+            <p class="text-xl md:text-2xl mb-8">"TO REACH OUT FOR THE LESS FORTUNATE IN THE SOCIETY"</p>
+            <p class="text-lg mb-8 italic">MATHEW 25: 37-40</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#contact" class="bg-white text-amber-600 px-6 py-3 rounded-lg font-bold hover:bg-amber-100 transition">Join Us</a>
+                <a href="#programs" class="border-2 border-white px-6 py-3 rounded-lg font-bold hover:bg-white hover:text-amber-600 transition">Our Programs</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donation Banner -->
+    <section class="bg-amber-700 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-medium">We can't help everyone but everyone can help someone | <a href="#donate" class="underline">Donate via Paybill: 303030 Account: 2050163507</a></p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-amber-600 mb-6">Our Mission</h2>
+                <p class="text-lg mb-8">Our main goal is to reach out to the less fortunate in the society and empower them through touching their lives.</p>
+                <p class="text-2xl font-semibold text-amber-700">"TOUCHING LIVES"</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-amber-600 mb-12">About Us</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Our Story</h3>
+                    <p class="mb-4">The Golden Heart Movement is a non-profit group of young Kenyan youths who came with an idea of reaching out for the less fortunate and youth empowerment in the society.</p>
+                    <p class="mb-4">"The Art of Giving has been around basically since the beginning of time. Ancient Hebrews instituted tax to help the poor, since then giving has evolved in to a practice that many people follow it. It has deeply become culture."</p>
+                    <p>It is with this idea that we sought to stretch out the little we collect in to feeding the orphans, street children, the elderly and the sick in the society.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4">Our Objectives</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                            <span>To touch lives of the less fortunate in the society.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                            <span>To nurture the less fortunate people spiritually, morally, physically, socially, economically and intellectually.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                            <span>To enlighten the youth on their roles in the society.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                            <span>To give a smile on the differently able.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                            <span>To help members realize and develop their talents positively.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-amber-600 mt-1 mr-2"></i>
+                            <span>Training leaders and enhancing responsibility.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geographical Coverage -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-amber-600 mb-12">Our Reach</h2>
+            <p class="text-center mb-8 max-w-2xl mx-auto">GHM operates across all 47 counties in Kenya, with active members in multiple regions working to touch lives nationwide.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="bg-gray-100 p-4 rounded shadow">Nairobi</div>
+                <div class="bg-gray-100 p-4 rounded shadow">Nakuru</div>
+                <div class="bg-gray-100 p-4 rounded shadow">Eldoret</div>
+                <div class="bg-gray-100 p-4 rounded shadow">Kakamega</div>
+                <div class="bg-gray-100 p-4 rounded shadow">Kisumu</div>
+                <div class="bg-gray-100 p-4 rounded shadow">Kitale</div>
+                <div class="bg-gray-100 p-4 rounded shadow">Kitui</div>
+                <div class="bg-gray-100 p-4 rounded shadow">Naivasha</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-amber-600 mb-12">Our Programs</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Quarterly Programs -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Quarterly Programs</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>1st Quarter: Visitation to Children's Home/Prison</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>2nd Quarter: Visitation to Elderly Home/Hospital</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>3rd Quarter: Mass Campaign (Vijana Tujanjaruke Mashinani or Hearty Runs)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Annual General Meeting</span>
+                        </li>
+                    </ul>
+                </div>
+
+                 <!-- Focus Areas -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Focus Areas</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Youth Capacity Development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Public Health & Mental Health</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Climate Change & Environment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Reproductive Health & Family Planning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Youth and Women Empowerment</span>
+                        </li>
+                    </ul>
+                </div>
+
+               
+                
+                <!-- Regular Activities -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Regular Activities</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Talking Point</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Weekly Collection</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Charity Works</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Team building</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Social events</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Fundraising -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Fundraising</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Fundraising events</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Donations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Members event payments</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Income generating projects</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Weekly collections</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Anniversary -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+          <div class="text-amber-600 text-4xl mb-4">
+                <i class="fas fa-birthday-cake"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Anniversary</h3>
+                <p>We celebrate <strong>GOLDEN HEART MOVEMENT DAY</strong> on <strong>1st SEPTEMBER</strong> every year unless stated otherwise by the office.</p>
+         </div>
+    </section>
+
+     <!-- Homes Visited Section -->
+    <section id="homes" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-amber-600 mb-12">Homes We've Visited</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Children's Homes</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>ST DORCAS CHILDREN HOME - Nairobi (Feb 2021)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>CHILD DISCOVERY CENTRE - Nakuru (May 2021)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>TOBIAH CHILDREN HOME - Eldoret (Sep 2021)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>DIVINE HOPE OF MERCY HOMES - Kiambu (Feb 2022)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>UPENDO CHILDREN HOME - Kakamega (May 2022)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>AIC BABY CARE HOMES - Kitui (Sep 2022)</span>
+                        </li>
+                       
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">More Homes & Activities</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>SUNRISE CHILDREN HOME - Baringo (Feb 2023)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>MAHIGA CHILDREN HOME - Nyeri (May 2023)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>MERCY RESCUE TRUST - Kitale (Sep 2023)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>ASANTE CHILDREN HOME - Naivasha (March 2024)</span>
+                        </li>
+                    </ul>
+                </section>
+
+
+     <!-- Donation Section -->
+    <section id="donate" class="py-16 bg-amber-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Support Our Cause</h2>
+            <p class="mb-8 max-w-2xl mx-auto">GHM relies on member contributions and donations to fund our activities. Your support helps us touch more lives across Kenya.</p>
+            <div class="bg-amber-700 p-6 rounded-lg max-w-md mx-auto">
+                <h3 class="text-xl font-semibold mb-4">Donation Details</h3>
+                <div class="mb-4">
+                    <p class="font-medium">Via M-Pesa:</p>
+                    <p><strong>Paybill:</strong> 303030</p>
+                    <p><strong>Account Number:</strong> 2050163507</p>
+                </div>
+            </div>
+        </div>
+    </section>  
+    
+     <!-- Gallery Section -->
+    <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-amber-600 mb-12">Our Gallery</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Gallery items would be added here -->
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/GHM pic/child 3.jpg" 
+                         alt="Charity work" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-gray-100">
+                        <p class="text-sm font-medium">Joyful Moments at the Children's Shelter</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/GHM pic/child 5.jpg" 
+                         alt="Elderly care" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-gray-100">
+                        <p class="text-sm font-medium">	Golden Heart Circle Gathering</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/GHM pic/youth 3.jpg" 
+                         alt="Team building" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-gray-100">
+                        <p class="text-sm font-medium">Bonding Through Youth Team Building</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/GHM pic/charity.jpg" 
+                         alt="Fundraising" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-gray-100">
+                        <p class="text-sm font-medium">Walk for Change Campaign</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/GHM pic/Com 7.jpg" 
+                         alt="Community service" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-gray-100">
+                        <p class="text-sm font-medium">Giving Back to the Community</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/GHM pic/Youth 1.jpg" 
+                         alt="Youth empowerment" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-gray-100">
+                        <p class="text-sm font-medium">Inspiring the Next Generation</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/GHM pic/comm 5.jpg" 
+                         alt="" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-gray-100">
+                        <p class="text-sm font-medium">School Outreach Initiative</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/GHM pic/Anni 3.jpg" 
+                         alt="Celebration" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-gray-100">
+                        <p class="text-sm font-medium">Celebrating Our Impact: Anniversary Edition</p>
+                    </div>
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/GHM pic/comm 4.jpg" 
+                         alt="" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-gray-100">
+                        <p class="text-sm font-medium">Tree Planting & Climate Justice</p>
+                    </div>
+                </div><div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/GHM pic/comm 5.jpg" 
+                         alt="" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-gray-100">
+                        <p class="text-sm font-medium">Digital Advocacy Workshop</p>
+                    </div>
+                </div><div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/GHM pic/youth 2.jpg" 
+                         alt="" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-gray-100">
+                        <p class="text-sm font-medium">Youth-Led Dialogues on Policy</p>
+                    </div>
+                </div><div class="gallery-item overflow-hidden rounded-lg shadow-md">
+                    <img src="images/GHM pic/comm 6.jpg" 
+                         alt="" class="w-full h-48 object-cover">
+                    <div class="p-3 bg-gray-100">
+                        <p class="text-sm font-medium">Peer Education in Action</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-amber-600 mb-12">Our Leadership Team</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- CEO -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-300 flex items-center justify-center text-4xl text-amber-600">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Chief Executive Officer</h3>
+                    <p class="text-gray-600 mb-4">Elizabeth Khisa</p>
+                    <p class="text-sm text-gray-700">
+                        Coordinates all activities, ensures completion of scheduled activities, custodian of peace, and can assume any role in absentia of any official.
+                    </p>
+                </div>
+                
+                <!-- Chairperson -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-300 flex items-center justify-center text-4xl text-amber-600">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Chairperson</h3>
+                    <p class="text-gray-600 mb-4">Ivan O'Kabero</p>
+                    <p class="text-sm text-gray-700">
+                        Chairs all meetings, final decision maker in controversial discussions, signatory to transactions, ensures officials function effectively.
+                    </p>
+                </div>
+                
+                <!-- Vice Chairperson -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-300 flex items-center justify-center text-4xl text-amber-600">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Vice Chairperson</h3>
+                    <p class="text-gray-600 mb-4">Vice Chair Name</p>
+                    <p class="text-sm text-gray-700">
+                        Works with chairperson, represents in absentia, custodian of discipline, in charge of welfare and visitations.
+                    </p>
+                </div>
+                
+                <!-- Executive Assistant -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-300 flex items-center justify-center text-4xl text-amber-600">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Executive Assistant</h3>
+                    <p class="text-gray-600 mb-4">Doreen Khivali</p>
+                    <p class="text-sm text-gray-700">
+                        Assists the CEO and chairperson in administrative duties, handles correspondence, and supports leadership functions.
+                    </p>
+                </div>
+
+                <!-- Deputy Executive Assistant --> 
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-300 flex items-center justify-center text-4xl text-amber-600">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Deputy Executive Assistant</h3>
+                    <p class="text-gray-600 mb-4">Silah Ojiambo </p>
+                    <p class="text-sm text-gray-700">
+                        Keeps records of all meetings, prepares minutes, manages official documents, and ensures effective communication within the movement.
+                    </p>
+                </div>
+                
+                <!-- Programs Coordinator -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-300 flex items-center justify-center text-4xl text-amber-600">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Programs Coordinator</h3>
+                    <p class="text-gray-600 mb-4">Elias Illa </p>
+                    <p class="text-sm text-gray-700">
+                        Organizes all movement events, informs members of meetings, manages MCs for events, handles membership cards and T-shirts.
+                    </p>
+                </div>
+                
+                <!-- Finance Lead -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-300 flex items-center justify-center text-4xl text-amber-600">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Finance Lead</h3>
+                    <p class="text-gray-600 mb-4">Ruby Rose</p>
+                    <p class="text-sm text-gray-700">
+                        Receives and banks finances, keeps financial records, informs of financial status, financial advisor, signatory to transactions.
+                    </p>
+                </div>
+                
+                <!-- Media & Communications Lead -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-300 flex items-center justify-center text-4xl text-amber-600">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Media & Communications</h3>
+                    <p class="text-gray-600 mb-4">Shakira Omata</p>
+                    <p class="text-sm text-gray-700">
+                        Handles all media relations, social media presence, press releases, and communication strategies for the movement.
+                    </p>
+                </div>
+                <!-- The committee -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <div class="w-32 h-32 mx-auto mb-4 rounded-full bg-gray-300 flex items-center justify-center text-4xl text-amber-600">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">The Committee</h3>
+                    <p class="text-gray-600 mb-4">Committee Members</p>
+                    <p class="text-sm text-gray-700">
+                        A group of dedicated members who support the leadership team in various capacities, ensuring the smooth operation of the movement.
+                    </p>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-amber-600 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Contact Us</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4">Get In Touch</h3>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-1">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded text-gray-800">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-1">Email</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded text-gray-800">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded text-gray-800"></textarea>
+                        </div>
+                        <button type="submit" class="bg-white text-amber-600 px-6 py-3 rounded-lg font-bold hover:bg-amber-100 transition">Send Message</button>
+                    </form>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-xl font-semibold mb-4">Connect With Us</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p>Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <p>+254 797870821</p>
+                                <p>+254 723364428</p>
+                                <p>+254 113768580</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p>goldenheartmovement@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h4 class="font-medium mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-2xl hover:text-amber-200 transition">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/_ghm.254?igsh=MXJmZjFhcmZqMXl2ZQ==" class="text-2xl hover:text-amber-200 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-2xl hover:text-amber-200 transition">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-amber-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-heart text-2xl"></i>
+                        <span class="text-xl font-bold">Golden Heart Movement</span>
+                    </div>
+                    <p class="mt-2">Touching Lives</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p>&copy; 2025 Golden Heart Movement. All rights reserved.</p>
+                    <p class="mt-1">Designed with <i class="fas fa-heart text-red-400"></i> for the community</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
