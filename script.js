@@ -98,19 +98,19 @@ function initTeamSlider() {
     function goToSlide(index) {
         currentIndex = (index + slideCount) % slideCount;
         updateSlider();
-        resetAutoSlide(); // Reset timer when manually navigating
+        resetAutoSlide(); 
     }
 
     function nextSlide() {
         currentIndex = (currentIndex + 1) % slideCount;
         updateSlider();
-        resetAutoSlide(); // Reset timer when manually navigating
+        resetAutoSlide(); // Reset timer 
     }
 
     function prevSlide() {
         currentIndex = (currentIndex - 1 + slideCount) % slideCount;
         updateSlider();
-        resetAutoSlide(); // Reset timer when manually navigating
+        resetAutoSlide(); // Reset timer
     }
 
     // Auto-advance slides
@@ -134,4 +134,54 @@ function initTeamSlider() {
 
 // Initialize team slider when DOM is loaded
 initTeamSlider();
+
+// Contact Form Submission with Popup
+const form = document.getElementById('contact-form');
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+
+  fetch('https://formsubmit.co/ajax/goldenheartmovement@gmail.com', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json'
+    },
+    body: formData
+  })
+    .then(response => {
+      if (response.ok) {
+        showToast('Thank you! Your message has been received🤝.');
+        form.reset();
+
+        // Redirect after 4 seconds (optional)
+        setTimeout(() => {
+          window.location.href = '/#home'; // Change to your desired URL
+        }, 4000);
+      } else {
+        return response.json().then(data => {
+          showToast('Error: ' + (data.message || 'Unknown error.'));
+        });
+      }
+    })
+    .catch(error => {
+      console.error(error);
+      showToast('Error sending message. Check console.');
+    });
+});
+
+function showToast(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.remove('opacity-0');
+  toast.classList.add('opacity-100');
+
+  setTimeout(() => {
+    toast.classList.remove('opacity-100');
+    toast.classList.add('opacity-0');
+  }, 3000);
+}
+
+
+
 });
