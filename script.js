@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Mobile menu toggle
+  document.getElementById("year").textContent = new Date().getFullYear();
   document.getElementById('menu-toggle').addEventListener('click', function() {
     const menu = document.getElementById('mobile-menu');
     menu.classList.toggle('hidden');
