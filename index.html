@@ -20,9 +20,9 @@
                 <a href="#home" class="hover:text-amber-200 transition">Home</a>
                 <a href="#about" class="hover:text-amber-200 transition">About Us</a>
                 <a href="#programs" class="hover:text-amber-200 transition">Programs</a>
-                <a href="#gallery" class="hover:text-amber-200 transition">Gallery</a>
                 <a href="#contact" class="hover:text-amber-200 transition">Contact</a>
                 <a href="#donate" class="hover:text-amber-200 transition">Donate</a>
+                <a href="#partner" class="hover:text-amber-200 transition">Partner with us</a>
             </div>
             <button class="md:hidden text-xl" id="menu-toggle">
                 <i class="fas fa-bars"></i>
@@ -36,6 +36,7 @@
                 <a href="#programs" class="py-2 hover:text-amber-200 transition">Programs</a>
                 <a href="#contact" class="py-2 hover:text-amber-200 transition">Contact</a>
                 <a href="#donate" class="py-2 hover:text-amber-200 transition">Donate</a>
+                <a href="#partner" class="hover:text-amber-200 transition">Partner with us</a>
             </div>
         </div>
     </nav>
@@ -214,7 +215,7 @@
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
-                            <span>Reproductive Health & Family Planning</span>
+                            <span>Reproductive Health</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
@@ -355,112 +356,168 @@
                 </section>
 
 
-     <!-- Donation Section -->
-    <section id="donate" class="py-16 bg-amber-600 text-white">
-        <div class="container mx-auto px-4 text-center">
-            <h2 class="text-3xl font-bold mb-6">Support Our Cause</h2>
-            <p class="mb-8 max-w-2xl mx-auto">GHM relies on member contributions and donations to fund our activities. Your support helps us touch more lives across Kenya.</p>
-            <div class="bg-amber-700 p-6 rounded-lg max-w-md mx-auto">
-                <h3 class="text-xl font-semibold mb-4">Donation Details</h3>
-                <div class="mb-4">
-                    <p class="font-medium">Via M-Pesa:</p>
-                    <p><strong>Paybill:</strong> 303030</p>
-                    <p><strong>Account Number:</strong> 2050163507</p>
+    <!--  Donation and Partner Sections -->
+<section class="py-16 bg-amber-600 text-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row gap-8">
+            <!-- Donation Section -->
+            <div id="donate" class="md:w-1/2 text-center">
+                <h2 class="text-3xl font-bold mb-6">Support Our Cause</h2>
+                <p class="mb-8 max-w-2xl mx-auto">GHM relies on member contributions and donations to fund our activities. Your support helps us touch more lives across Kenya.</p>
+                <div class="bg-amber-700 p-6 rounded-lg max-w-md mx-auto">
+                    <h3 class="text-xl font-semibold mb-4">Donation Details</h3>
+                    <div class="mb-4">
+                        <p class="font-medium">Via M-Pesa:</p>
+                        <p><strong>Paybill:</strong> 303030</p>
+                        <p><strong>Account Number:</strong> 2050163507</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partner With Us Section -->
+            <div id="partner" class="md:w-1/2 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-8">Partner With Us</h2>
+                    <p class="mb-8 max-w-2xl mx-auto">Currently Accepting Partners.</p>
+                    
+                    <!-- Partner Button that reveals the form -->
+                    <button id="partnerButton" class="bg-black text-white px-8 py-3 rounded-lg font-bold hover:bg-green-600 transition">
+                        Become a Partner
+                    </button>
+                    
+                    <!-- Partnership Form (hidden) -->
+                    <div id="partnerForm" class="hidden bg-gray-100 p-6 rounded-lg shadow-lg text-gray-800 mt-8">
+                        <h3 class="text-xl font-semibold mb-4 text-center text-amber-700">Join our cause</h3>
+                        <form id="partnership-form" class="space-y-4">
+                            <div>
+                                <label for="org-name" class="block mb-1 font-medium">Organization Name</label>
+                                <input type="text" id="org-name" name="organization" class="w-full px-4 py-2 rounded border border-gray-300" required>
+                            </div>
+                            <div>
+                                <label for="partner-email" class="block mb-1 font-medium">Email</label>
+                                <input type="email" id="partner-email" name="email" class="w-full px-4 py-2 rounded border border-gray-300" required>
+                            </div>
+                            <div>
+                                <label for="partner-phone" class="block mb-1 font-medium">Phone</label>
+                                 <input type="tel" id="partner-phone" name="phone" class="w-full px-4 py-2 rounded border border-gray-300" required>
+                            </div>
+                            <div>
+                                <label for="partner-type" class="block mb-1 font-medium">Partnership Interest</label>
+                                <select id="partner-type" name="partnership_type" class="w-full px-4 py-2 rounded border border-gray-300" required>
+                                    <option value="">Select partnership type</option>
+                                    <option value="financial">Financial Support</option>
+                                    <option value="in-kind">In-Kind Donations</option>
+                                    <option value="volunteer">Volunteer Programs</option>
+                                    <option value="event">Event Sponsorship</option>
+                                    <option value="other">Other Collaboration</option>
+                                </select>
+                            </div>
+                            <input type="hidden" name="_subject" value="New Partnership Request">
+                             <input type="hidden" name="_template" value="table">
+                            <button type="submit" class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-green-600 transition">
+                                Submit Partnership Request
+                            </button>
+                        </form>
+                        </div>  
+                    </div>
                 </div>
             </div>
         </div>
-    </section>  
+    </div>
+</section>
+
     
-     <!-- Gallery Section -->
     <section id="gallery" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-amber-600 mb-12">Our Gallery</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                <!-- Gallery items would be added here -->
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                    <img src="images/GHM pic/child 3.jpg" 
-                         alt="Charity work" class="w-full h-48 object-cover">
-                    <div class="p-3 bg-gray-100">
-                        <p class="text-sm font-medium">Joyful Moments at the Children's Shelter</p>
-                    </div>
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                    <img src="images/GHM pic/child 5.jpg" 
-                         alt="Elderly care" class="w-full h-48 object-cover">
-                    <div class="p-3 bg-gray-100">
-                        <p class="text-sm font-medium">	Golden Heart Circle Gathering</p>
-                    </div>
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                    <img src="images/GHM pic/youth 3.jpg" 
-                         alt="Team building" class="w-full h-48 object-cover">
-                    <div class="p-3 bg-gray-100">
-                        <p class="text-sm font-medium">Bonding Through Youth Team Building</p>
-                    </div>
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                    <img src="images/GHM pic/charity.jpg" 
-                         alt="Fundraising" class="w-full h-48 object-cover">
-                    <div class="p-3 bg-gray-100">
-                        <p class="text-sm font-medium">Walk for Change Campaign</p>
-                    </div>
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                    <img src="images/GHM pic/Com 7.jpg" 
-                         alt="Community service" class="w-full h-48 object-cover">
-                    <div class="p-3 bg-gray-100">
-                        <p class="text-sm font-medium">Giving Back to the Community</p>
-                    </div>
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                    <img src="images/GHM pic/Youth 1.jpg" 
-                         alt="Youth empowerment" class="w-full h-48 object-cover">
-                    <div class="p-3 bg-gray-100">
-                        <p class="text-sm font-medium">Inspiring the Next Generation</p>
-                    </div>
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                    <img src="images/GHM pic/comm 5.jpg" 
-                         alt="" class="w-full h-48 object-cover">
-                    <div class="p-3 bg-gray-100">
-                        <p class="text-sm font-medium">School Outreach Initiative</p>
-                    </div>
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                    <img src="images/GHM pic/Anni 3.jpg" 
-                         alt="Celebration" class="w-full h-48 object-cover">
-                    <div class="p-3 bg-gray-100">
-                        <p class="text-sm font-medium">Celebrating Our Impact: Anniversary Edition</p>
-                    </div>
-                </div>
-                <div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                    <img src="images/GHM pic/comm 4.jpg" 
-                         alt="" class="w-full h-48 object-cover">
-                    <div class="p-3 bg-gray-100">
-                        <p class="text-sm font-medium">Tree Planting & Climate Justice</p>
-                    </div>
-                </div><div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                    <img src="images/GHM pic/comm 5.jpg" 
-                         alt="" class="w-full h-48 object-cover">
-                    <div class="p-3 bg-gray-100">
-                        <p class="text-sm font-medium">Digital Advocacy Workshop</p>
-                    </div>
-                </div><div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                    <img src="images/GHM pic/youth 2.jpg" 
-                         alt="" class="w-full h-48 object-cover">
-                    <div class="p-3 bg-gray-100">
-                        <p class="text-sm font-medium">Youth-Led Dialogues on Policy</p>
-                    </div>
-                </div><div class="gallery-item overflow-hidden rounded-lg shadow-md">
-                    <img src="images/GHM pic/comm 6.jpg" 
-                         alt="" class="w-full h-48 object-cover">
-                    <div class="p-3 bg-gray-100">
-                        <p class="text-sm font-medium">Peer Education in Action</p>
-                    </div>
-                </div>
-            </div>
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-amber-600 mb-8">Our Gallery</h2>
+
+    <!-- Tabs -->
+    <div class="flex justify-center mb-8 space-x-4">
+      <button class="tab-btn px-4 py-2 bg-amber-600 text-white rounded" data-tab="all">All</button>
+      <button class="tab-btn px-4 py-2 bg-amber-600 text-white rounded" data-tab="children">Children</button>
+      <button class="tab-btn px-4 py-2 bg-amber-600 text-white rounded" data-tab="youth">Youth</button>
+      <button class="tab-btn px-4 py-2 bg-amber-600 text-white rounded" data-tab="community">Community</button>
+      <button class="tab-btn px-4 py-2 bg-amber-600 text-white rounded" data-tab="advocacy">Advocacy</button>
+    </div>
+
+    <!-- Gallery Grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <!-- Each gallery item includes a data-category -->
+      <div class="gallery-item" data-category="children">
+        <img src="images/GHM pic/child 3.jpg" alt="Charity work" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <div class="p-3 bg-gray-100">
+          <p class="text-sm font-medium">Joyful Moments at the Children's Shelter</p>
         </div>
-    </section>
+      </div>
+      <div class="gallery-item" data-category="children">
+        <img src="images/GHM pic/child 5.jpg" alt="Elderly care" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <div class="p-3 bg-gray-100">
+          <p class="text-sm font-medium">Golden Heart Circle Gathering</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="youth">
+        <img src="images/GHM pic/youth 3.jpg" alt="Team building" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <div class="p-3 bg-gray-100">
+          <p class="text-sm font-medium">Bonding Through Youth Team Building</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="community">
+        <img src="images/GHM pic/charity.jpg" alt="Fundraising" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <div class="p-3 bg-gray-100">
+          <p class="text-sm font-medium">Walk for Change Campaign</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="community">
+        <img src="images/GHM pic/Com 7.jpg" alt="Community service" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <div class="p-3 bg-gray-100">
+          <p class="text-sm font-medium">Giving Back to the Community</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="youth">
+        <img src="images/GHM pic/Youth 1.jpg" alt="Youth empowerment" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <div class="p-3 bg-gray-100">
+          <p class="text-sm font-medium">Inspiring the Next Generation</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="community">
+        <img src="images/GHM pic/comm 5.jpg" alt="School" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <div class="p-3 bg-gray-100">
+          <p class="text-sm font-medium">School Outreach Initiative</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="community">
+        <img src="images/GHM pic/Anni 3.jpg" alt="Anniversary" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <div class="p-3 bg-gray-100">
+          <p class="text-sm font-medium">Celebrating Our Impact: Anniversary Edition</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="community">
+        <img src="images/GHM pic/comm 4.jpg" alt="Tree planting" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <div class="p-3 bg-gray-100">
+          <p class="text-sm font-medium">Tree Planting & Climate Justice</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="advocacy">
+        <img src="images/GHM pic/Advocacy.jpg" alt="Workshop" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <div class="p-3 bg-gray-100">
+          <p class="text-sm font-medium">Digital Advocacy Workshop</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="youth">
+        <img src="images/GHM pic/youth 2.jpg" alt="Dialogues" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <div class="p-3 bg-gray-100">
+          <p class="text-sm font-medium">Youth-Led Dialogues on Policy</p>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="advocacy">
+        <img src="images/GHM pic/comm 6.jpg" alt="Peer education" class="w-full h-48 object-cover rounded-lg shadow-md">
+        <div class="p-3 bg-gray-100">
+          <p class="text-sm font-medium">Peer Education in Action</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
     <!-- Team Section -->
@@ -552,13 +609,28 @@
                         </div>
                         <h3 class="text-xl font-semibold mb-1">The Committee</h3>
                         <p class="text-gray-600 mb-4">Regional Coordinators</p>
-                        <ul class="text-sm text-gray-700 space-y-1">
-                            <li>Brandine Anyolo - Kakamega/Kisumu</li>
-                            <li>Oscar Muvali - Kitui</li>
-                            <li>Victor Kiplimo - Baringo/Uasin Gishu</li>
-                            <li>Pienziah Kuloba - Nairobi/Kiambu</li>
-                            <li>Shadrack Olwande - Kitale</li>
-                        </ul>
+                       <ol class="text-sm text-gray-700 space-y-2 pl-5">
+                           <li class="flex justify-between">
+                               <span class="font-medium">Brandine Anyolo</span>
+                               <span class="text-gray-500">Kakamega/Kisumu</span>
+                           </li>
+                           <li class="flex justify-between">
+                               <span class="font-medium">Victor Kiplimo</span>
+                               <span class="text-gray-500">Baringo/Uasin Gishu</span>
+                           </li>
+                           <li class="flex justify-between">
+                               <span class="font-medium">Pienziah Kuloba</span>
+                               <span class="text-gray-500">Nairobi/Kiambu</span>
+                           </li>
+                           <li class="flex justify-between">
+                               <span class="font-medium">Shadrack Olwande</span>
+                               <span class="text-gray-500">Kitale</span>
+                           </li>
+                           <li class="flex justify-between">
+                               <span class="font-medium">Oscar Muvali</span>
+                               <span class="text-gray-500">Kitui</span>
+                           </li>
+                       </ol>
                     </div>
                 </div>
             </div>

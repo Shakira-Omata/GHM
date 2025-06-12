@@ -183,6 +183,69 @@ function showToast(message) {
   }, 3000);
 }
 
+const tabs = document.querySelectorAll(".tab-btn");
+  const items = document.querySelectorAll(".gallery-item");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const selected = tab.getAttribute("data-tab");
+
+      tabs.forEach(t => t.classList.remove("bg-amber-600", "text-white"));
+      tab.classList.add("bg-amber-600", "text-white");
+
+      items.forEach(item => {
+        const category = item.getAttribute("data-category");
+        item.style.display = (selected === "all" || selected === category) ? "block" : "none";
+      });
+    });
+  });
+
+  // Initialize with 'All' visible
+  document.querySelector('.tab-btn[data-tab="all"]').click();
+
+   document.getElementById('partnerButton').addEventListener('click', function() {
+        const form = document.getElementById('partnerForm');
+        form.classList.toggle('hidden');
+    });
+
+    // Partnership Form Submission
+const partnershipForm = document.getElementById('partnership-form');
+if (partnershipForm) {
+    partnershipForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const formData = new FormData(partnershipForm);
+
+        fetch('https://formsubmit.co/ajax/goldenheartmovement@gmail.com', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json'
+            },
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                showToast('Thank you! Your partnership request has been submitted. We will contact you soon.');
+                partnershipForm.reset();
+                document.getElementById('partnerForm').classList.add('hidden');
+                
+                // Optional: Redirect after submission
+                setTimeout(() => {
+                    window.location.href = '/#home';
+                }, 4000);
+            } else {
+                return response.json().then(data => {
+                    showToast('Error: ' + (data.message || 'Failed to submit partnership request.'));
+                });
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            showToast('Error submitting partnership request. Please try again.');
+        });
+    });
+}
+
 
 
 });
