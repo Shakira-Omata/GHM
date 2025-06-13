@@ -1,10 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Mobile menu toggle
+  // Set current year in footer
   document.getElementById("year").textContent = new Date().getFullYear();
-  document.getElementById('menu-toggle').addEventListener('click', function() {
-    const menu = document.getElementById('mobile-menu');
-    menu.classList.toggle('hidden');
-  });
+ 
+
+  // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
 
   // Smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -27,37 +30,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // Hero Slideshow
-  let currentSlideIndex = 0;
-  const slides = document.querySelectorAll('.hero-slide');
-  const indicators = document.querySelectorAll('.indicator');
-  const totalSlides = slides.length;
+   //Hero Image Slideshow
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.hero-slide');
+        const indicators = document.querySelectorAll('.image-indicator');
+        const totalSlides = slides.length;
 
-  function showSlide(index) {
-    slides.forEach(slide => slide.classList.remove('active'));
-    indicators.forEach(indicator => indicator.classList.remove('active'));
-    slides[index].classList.add('active');
-    indicators[index].classList.add('active');
-  }
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            indicators.forEach(indicator => indicator.classList.remove('active'));
+            slides[index].classList.add('active');
+            indicators[index].classList.add('active');
+        }
 
-  function changeSlide(direction) {
-    currentSlideIndex = (currentSlideIndex + direction + totalSlides) % totalSlides;
-    showSlide(currentSlideIndex);
-  }
+        function changeSlide(direction) {
+            currentSlideIndex = (currentSlideIndex + direction + totalSlides) % totalSlides;
+            showSlide(currentSlideIndex);
+        }
 
-  function currentSlide(index) {
-    currentSlideIndex = index - 1;
-    showSlide(currentSlideIndex);
-  }
+        function currentSlide(index) {
+            currentSlideIndex = index - 1;
+            showSlide(currentSlideIndex);
+        }
 
-  document.querySelector('.prev')?.addEventListener('click', () => changeSlide(-1));
-  document.querySelector('.next')?.addEventListener('click', () => changeSlide(1));
+        // Auto-advance slides
+        setInterval(() => changeSlide(1), 5000);
 
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => currentSlide(index + 1));
-  });
-
-  let slideInterval = setInterval(() => changeSlide(1), 5000);
 
   // Team Slider
 function initTeamSlider() {
@@ -245,6 +243,7 @@ if (partnershipForm) {
         });
     });
 }
+
 
 
 
