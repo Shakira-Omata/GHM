@@ -157,7 +157,7 @@ form.addEventListener('submit', function (e) {
 
         // Redirect after 4 seconds (optional)
         setTimeout(() => {
-          window.location.href = '/#home'; // Change to your desired URL
+          window.location.href = '/'; // Change to your desired URL
         }, 4000);
       } else {
         return response.json().then(data => {
@@ -231,7 +231,7 @@ if (partnershipForm) {
                 
                 // Optional: Redirect after submission
                 setTimeout(() => {
-                    window.location.href = '/#home';
+                    window.location.href = '/';
                 }, 4000);
             } else {
                 return response.json().then(data => {
