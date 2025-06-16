@@ -244,6 +244,14 @@ if (partnershipForm) {
     });
 }
 
+ //Initialize AOS 
+  AOS.init({
+    duration: 800, // Animation duration in milliseconds
+    once: true, // Whether animation should happen only once
+    easing: 'ease-in-out', // Easing function for the animations
+    offset: 100 // Offset (in pixels) to trigger the animation earlier or later
+  });
+
 
 
 
