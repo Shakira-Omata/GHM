@@ -252,10 +252,9 @@ if (partnershipForm) {
     offset: 100 // Offset (in pixels) to trigger the animation earlier or later
   });
   AOS.init({
-            duration: 2000,
-            easing: 'ease-out-cubic',
-        });
-
+    duration: 2000,
+    easing: 'ease-out-cubic',
+  });
 
 
 
