@@ -1,12 +1,5 @@
 /* =============================================================================
-   HERO SECTION & SLIDESHOW
-   ============================================================================= */
-<<<<<<< HEAD
-=======
-/* Remove underline and blue color from all links */
-
-
->>>>>>> e10de0463a31aca1501237f92ad7eb466293ca0b
+   HERO SECTION & SLIDESHOW */
 
 .hero-section {
     min-height: 100vh;
@@ -447,10 +440,6 @@
     .logo-img{
         height: 32px;
     }
-<<<<<<< HEAD
-}
-=======
+    
 }
 
-
->>>>>>> e10de0463a31aca1501237f92ad7eb466293ca0b
