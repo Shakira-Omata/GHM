@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Heart Movement - Touching Lives</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-amber-800 text-white shadow-lg sticky top-0 z-50">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <div class="flex items-center space-x-2">
+      <a href="#home" class="flex items-center no-underline text-inherit">
+        <img src="images/Logo/Logo/2.jpg" alt="Golden Heart Movement Logo" class="h-20 w-20 rounded-full">
+      </a>
+    </div>
+
+    <div class="hidden md:flex space-x-6">
+      <a href="#home" class="no-underline text-inherit hover:text-amber-200 transition">Home</a>
+      <a href="#about" class="no-underline text-inherit hover:text-amber-200 transition">About Us</a>
+      <a href="#programs" class="no-underline text-inherit hover:text-amber-200 transition">Programs</a>
+      <a href="#contact" class="no-underline text-inherit hover:text-amber-200 transition">Contact</a>
+      <a href="#gallery" class="no-underline text-inherit hover:text-amber-200 transition">Gallery</a>
+      <a href="#partner" class="no-underline text-inherit hover:text-amber-200 transition">Partner with us</a>
+    </div>
+
+    <button class="md:hidden text-xl" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="md:hidden hidden bg-amber-700" id="mobile-menu">
+    <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+      <a href="#home" class="no-underline text-inherit py-2 hover:text-amber-200 transition">Home</a>
+      <a href="#about" class="no-underline text-inherit py-2 hover:text-amber-200 transition">About Us</a>
+      <a href="#programs" class="no-underline text-inherit py-2 hover:text-amber-200 transition">Programs</a>
+      <a href="#contact" class="no-underline text-inherit py-2 hover:text-amber-200 transition">Contact</a>
+      <a href="#donate" class="no-underline text-inherit py-2 hover:text-amber-200 transition">Donate</a>
+      <a href="#partner" class="no-underline text-inherit py-2 hover:text-amber-200 transition">Partner with us</a>
+    </div>
+  </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section py-20 flex items-center">
+        <div class="container mx-auto px-4">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                
+                <!-- Left Column: Text Content -->
+                <div class="space-y-8 lg:pr-8">
+                    <div class="space-y-6 fade-in-left">
+                        <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+                            <span class="bg-gradient-to-r from-amber-600 to-orange-600 bg-clip-text text-transparent">Golden Heart</span>
+                            <br>
+                            <span class="text-gray-800">Movement</span>
+                        </h1>
+                        
+                        <div class="space-y-4">
+                            <p class="text-xl lg:text-2xl text-gray-700 font-medium">
+                                TO REACH OUT FOR THE LESS FORTUNATE IN THE SOCIETY
+                            </p>
+                            <p class="text-lg text-amber-600 font-semibold italic">
+                                MATTHEW 25: 37-40
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Call to Action Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 fade-in-up">
+                       <a href="#contact" class="border-2 border-amber-600 text-amber-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-amber-600 hover:text-white transform hover:scale-105 transition-all duration-300 text-center">
+                            <i class="fas fa-hands-helping mr-2"></i>
+                            Join Us
+                        </a>
+                        <a href="#programs" class="border-2 border-amber-600 text-amber-600 px-8 py-4 rounded-xl font-bold text-lg hover:bg-amber-600 hover:text-white transform hover:scale-105 transition-all duration-300 text-center">
+                            <i class="fas fa-heart mr-2"></i>
+                            Our Programs
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Column: Animated Border Image -->
+                <div class="relative fade-in-right">
+                    <div class="hero-image-container">
+                        <!-- Animated Border Layers -->
+                        <div class="rotating-border"></div>
+                        <div class="animated-border"></div>
+                        <div class="animated-border-2"></div>
+                        
+                        <!-- Image Slideshow Container -->
+                        <div class="hero-image">
+                            <!-- photo slide -->
+                            <div class="hero-slide active" style="background-image: url('images/Cover/Cover/Child\ 1.jpg');"></div> 
+                            <div class="hero-slide" style="background-image: url('images/Cover/Cover/child\ 4.jpg');"></div>
+                            <div class="hero-slide" style="background-image: url('images/Cover/Cover/cover\ 1.jpg');"></div>
+                            <div class="hero-slide" style="background-image: url('images/Cover/Cover/5.jpg');"></div>
+                            <div class="hero-slide" style="background-image: url('images/Cover/Cover/child\ 3.jpg');"></div>
+                            <div class="hero-slide" style="background-image: url('images/Cover/Cover/TED_0709.JPG');"></div>
+                            <div class="hero-slide" style="background-image: url('images/Cover/Cover/TED_0576[1].JPG');"></div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+        
+
+    <!-- Donation Banner -->
+    <section class="bg-amber-700 text-white py-4">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-medium">
+            We can't help everyone but everyone can help someone |
+            <a href="#donate" class="no-underline text-inherit hover:text-amber-200 transition">
+                Donate via Paybill: 303030 Account: 2050163507
+            </a>
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Mission Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-amber-600 mb-6">Our Mission</h2>
+                <p class="text-lg mb-8">Our main goal is to reach out to the less fortunate in the society and empower them through touching their lives.</p>
+                <p class="text-2xl font-semibold text-amber-700">"TOUCHING LIVES"</p>
+            </div>
+        </div>
+    </section>
+
+  <!-- About Us Section -->
+    <section id="about" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-amber-600 mb-12" data-aos="fade-up">About Us</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <h3 class="text-2xl font-semibold mb-4">Our Story</h3>
+                    <p class="mb-4">The Golden Heart Movement is a non-profit group of young Kenyan youths who came with an idea of reaching out for the less fortunate and youth empowerment in the society.</p>
+                    <p class="mb-4">"The Art of Giving has been around basically since the beginning of time. Ancient Hebrews instituted tax to help the poor, since then giving has evolved in to a practice that many people follow it. It has deeply become culture."</p>
+                    <p>It is with this idea that we sought to stretch out the little we collect in to feeding the orphans, street children, the elderly and the sick in the society.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-4" data-aos="fade-left">Meet Our Founder</h3>
+                     
+                    <!-- Founder Profile with AOS flip-right effect -->
+                    <div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-amber-600" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="200">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <!-- Left Side: Founder Image and Name -->
+                            <div class="flex-shrink-0 text-center md:text-left">
+                                <div class="relative inline-block mb-4">
+                                    <img src="images/Leaders/Leaders/Vonah 1.jpg" alt="Founder - Golden Heart Movement"
+                                          class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-amber-600 shadow-lg">
+                                    <div class="absolute -bottom-2 -right-2 bg-amber-600 rounded-full p-2">
+                                        
+                                    </div>
+                                </div>
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-1">Elizabeth Khisa</h4>
+                                </div>
+                            </div>
+                                                     
+                            <!-- Right Side: Message -->
+                            <div class="flex-1 space-y-4">
+                                <p class="text-gray-700 italic">As founder of the Golden Heart Movement, I'm grateful to God, our supporters, and the amazing Golden Heart family. Together, we've touched lives through mentorship, health education, and skill sharing. Thank you for being part of this journey and to those yet to join, you're welcome to help us make a difference</p>
+                                                                 
+                                <p class="font-bold text-amber-600 text-lg">Remember, WE RISE BY LIFTING OTHERS ONE PERSON AT A TIME.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geographical Coverage -->
+    <section class="py-16 bg-white" data-aos="fade-up" data-aos-duration="1000">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-amber-600 mb-12" data-aos="zoom-in" data-aos-delay="200">Our Reach</h2>
+            <p class="text-center mb-8 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="400">GHM operates across all 47 counties in Kenya, with active members in multiple regions working to touch lives nationwide.</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="bg-gray-100 p-4 rounded shadow" data-aos="flip-left" data-aos-delay="100">Nairobi</div>
+                <div class="bg-gray-100 p-4 rounded shadow" data-aos="flip-left" data-aos-delay="200">Nakuru</div>
+                <div class="bg-gray-100 p-4 rounded shadow" data-aos="flip-left" data-aos-delay="300">Eldoret</div>
+                <div class="bg-gray-100 p-4 rounded shadow" data-aos="flip-left" data-aos-delay="400">Kakamega</div>
+                <div class="bg-gray-100 p-4 rounded shadow" data-aos="flip-left" data-aos-delay="500">Kisumu</div>
+                <div class="bg-gray-100 p-4 rounded shadow" data-aos="flip-left" data-aos-delay="600">Kitale</div>
+                <div class="bg-gray-100 p-4 rounded shadow" data-aos="flip-left" data-aos-delay="700">Kitui</div>
+                <div class="bg-gray-100 p-4 rounded shadow" data-aos="flip-left" data-aos-delay="800">Naivasha</div>
+                <div class="bg-gray-100 p-4 rounded shadow" data-aos="flip-left" data-aos-delay="900">Nyeri</div>
+                <div class="bg-gray-100 p-4 rounded shadow" data-aos="flip-left" data-aos-delay="1000">Baringo</div>
+                <div class="bg-gray-100 p-4 rounded shadow" data-aos="flip-left" data-aos-delay="1100">Kiambu</div>
+                <div class="bg-gray-100 p-4 rounded shadow" data-aos="flip-left" data-aos-delay="1200">Machakos</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-16 bg-white" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-amber-600 mb-12" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Our Programs</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Quarterly Programs -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Quarterly Programs</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>1st Quarter: Visitation to Children's Home/Prison</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>2nd Quarter: Visitation to Elderly Home/Hospital</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>3rd Quarter: Mass Campaign (Vijana Tujanjaruke Mashinani or Hearty Runs)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Annual General Meeting</span>
+                        </li>
+                    </ul>
+                </div>
+
+                 <!-- Focus Areas -->
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Focus Areas</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Youth Capacity Development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Public Health & Mental Health</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Climate Change & Environment</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Reproductive Health</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Youth and Women Empowerment</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Regular Activities -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="400">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Regular Activities</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Talking Point</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Weekly Collection</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Charity Works</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Team building</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Social events</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Fundraising -->
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="500">
+                    <div class="text-amber-600 text-4xl mb-4">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Fundraising</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Fundraising events</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Donations</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Members event payments</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Income generating projects</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-circle text-amber-600 text-xs mt-2 mr-2"></i>
+                            <span>Weekly collections</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- Anniversary -->
+        <div class="bg-gray-100 p-6 rounded-lg shadow-md text-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="600">
+          <div class="text-amber-600 text-4xl mb-4">
+                <i class="fas fa-birthday-cake"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Anniversary</h3>
+                <p>We celebrate <strong>GOLDEN HEART MOVEMENT DAY</strong> on <strong>1st SEPTEMBER</strong> every year unless stated otherwise by the office.</p>
+         </div>
+    </section>
+     <!-- Homes Visited Section -->
+    <section id="homes" class="py-16 bg-white" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-amber-600 mb-12" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="200">Homes We've Visited</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="400">
+                    <h3 class="text-2xl font-semibold mb-4">Children's Homes</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="600">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>ST DORCAS CHILDREN HOME - Nairobi (Feb 2021)</span>
+                        </li>
+                        <li class="flex items-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="700">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>CHILD DISCOVERY CENTRE - Nakuru (May 2021)</span>
+                        </li>
+                        <li class="flex items-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="800">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>TOBIAH CHILDREN HOME - Eldoret (Sep 2021)</span>
+                        </li>
+                        <li class="flex items-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="900">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>DIVINE HOPE OF MERCY HOMES - Kiambu (Feb 2022)</span>
+                        </li>
+                        <li class="flex items-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="1000">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>UPENDO CHILDREN HOME - Kakamega (May 2022)</span>
+                        </li>
+                        <li class="flex items-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="1100">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>AIC BABY CARE HOMES - Kitui (Sep 2022)</span>
+                        </li>
+                    </ul>
+                </div>
+                <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="500">
+                    <h3 class="text-2xl font-semibold mb-4">More Homes & Activities</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="1200">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>SUNRISE CHILDREN HOME - Baringo (Feb 2023)</span>
+                        </li>
+                        <li class="flex items-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="1300">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>MAHIGA CHILDREN HOME - Nyeri (May 2023)</span>
+                        </li>
+                        <li class="flex items-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="1400">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>MERCY RESCUE TRUST - Kitale (Sep 2023)</span>
+                        </li>
+                        <li class="flex items-start" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" data-aos-delay="1500">
+                            <i class="fas fa-home text-amber-600 mt-1 mr-2"></i>
+                            <span>ASANTE CHILDREN HOME - Naivasha (March 2024)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-16 bg-amber-800 text-white" id="donate-partner">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6 text-center">Support Our Cause</h2>
+            <p class="text-center mb-12 max-w-2xl mx-auto">
+            GHM relies on member contributions and donations to fund our activities. Your support helps us touch more lives across Kenya.
+            </p>
+
+            <!-- Flex container for Donation + Partner -->
+            <div class="flex flex-col lg:flex-row items-start justify-center gap-10" data-aos="fade-up">
+
+            <!-- Include Bootstrap & Paystack JS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+<!-- DONATION FORM -->
+<div class="bg-white text-gray-800 rounded-lg shadow-md p-8 w-full lg:w-1/2">
+  <h3 class="text-xl font-bold mb-4 text-amber-700">Make a Donation</h3>
+  <form id="donation-form" class="space-y-4">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <input type="text" id="donorName" placeholder="Your Name" class="form-control" required>
+      </div>
+      <div class="col-md-6">
+        <input type="email" id="donorEmail" placeholder="Your Email" class="form-control" required>
+      </div>
+      <div class="col-md-6">
+        <input type="tel" id="donorPhone" placeholder="Your Phone Number" class="form-control" required>
+      </div>
+      <div class="col-md-6">
+        <input type="number" id="donationAmount" placeholder="Custom Amount (Ksh)" class="form-control" required>
+      </div>
+    </div>
+
+    <div class="bg-light p-3 rounded border mt-3 text-sm">
+      <p class="fw-bold mb-1">Donation Details (M-Pesa):</p>
+      <p><strong>Paybill:</strong> 303030</p>
+      <p><strong>Account Number:</strong> 2050163507</p>
+    </div>
+
+    <div class="mt-3">
+      <label class="form-label fw-semibold">Select Payment Method:</label><br>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="payment" id="mpesa" value="mpesa" required>
+        <label class="form-check-label" for="mpesa">M-Pesa</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="payment" id="paypal" value="paypal">
+        <label class="form-check-label" for="paypal">PayPal</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="payment" id="card" value="card">
+        <label class="form-check-label" for="card">Card</label>
+      </div>
+    </div>
+
+    <div>
+      <label class="form-label fw-semibold" for="donation-type">Donation Type:</label>
+      <select id="donation-type" class="form-select" required>
+        <option value="">Select</option>
+        <option value="one-time">One-time</option>
+        <option value="monthly">Monthly</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="form-label fw-semibold" for="notes">Dedication / Note (optional):</label>
+      <textarea id="notes" rows="3" class="form-control" placeholder="E.g., In memory of..."></textarea>
+    </div>
+
+    <button type="submit" class="w-100 fw-bold text-white btn" style="background-color: #dd7900;">Donate Now</button>
+
+  </form>
+</div>
+
+<!-- M-Pesa Modal -->
+<div class="modal fade" id="mpesaModal" tabindex="-1" aria-labelledby="mpesaModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="mpesaModalLabel">M-Pesa Donation Instructions</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Paybill:</strong> 303030</p>
+        <p><strong>Account Number:</strong> 2050163507</p>
+        <p id="mpesaAmount"></p>
+        <p id="mpesaNote"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+            <!-- Partner With Us Section -->
+            <div id="partner" class="md:w-1/2 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-8">Partner With Us</h2>
+                    <p class="mb-8 max-w-2xl mx-auto">Currently Accepting Partners.</p>
+                    
+                    <!-- Partner Button that reveals the form -->
+                    <button id="partnerButton" class="bg-black text-white px-8 py-3 rounded-lg font-bold hover:bg-amber-600 transition">
+                        Become a Partner
+                    </button>
+                    
+                    <!-- Partnership Form (hidden) -->
+                    <div id="partnerForm" class="hidden bg-gray-100 p-6 rounded-lg shadow-lg text-gray-800 mt-8">
+                        <h3 class="text-xl font-semibold mb-4 text-center text-amber-700">Join our cause</h3>
+                        <form id="partnership-form" class="space-y-4">
+                            <div>
+                                <label for="org-name" class="block mb-1 font-medium">Organization Name</label>
+                                <input type="text" id="org-name" name="organization" class="w-full px-4 py-2 rounded border border-gray-300" required>
+                            </div>
+                            <div>
+                                <label for="partner-email" class="block mb-1 font-medium">Email</label>
+                                <input type="email" id="partner-email" name="email" class="w-full px-4 py-2 rounded border border-gray-300" required>
+                            </div>
+                            <div>
+                                <label for="partner-phone" class="block mb-1 font-medium">Phone</label>
+                                 <input type="tel" id="partner-phone" name="phone" class="w-full px-4 py-2 rounded border border-gray-300" required>
+                            </div>
+                            <div>
+                                <label for="partner-type" class="block mb-1 font-medium">Partnership Interest</label>
+                                <select id="partner-type" name="partnership_type" class="w-full px-4 py-2 rounded border border-gray-300" required>
+                                    <option value="">Select partnership type</option>
+                                    <option value="financial">Financial Support</option>
+                                    <option value="in-kind">In-Kind Donations</option>
+                                    <option value="volunteer">Volunteer Programs</option>
+                                    <option value="event">Event Sponsorship</option>
+                                    <option value="other">Other Collaboration</option>
+                                </select>
+                            </div>
+                            <input type="hidden" name="_subject" value="New Partnership Request">
+                             <input type="hidden" name="_template" value="table">
+                            <button type="submit" class="w-full bg-amber-600 text-white py-3 rounded-lg font-bold hover:bg-amber-900 transition">
+                                Submit Partnership Request
+                            </button>
+                        </form>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+
+            </div>
+       
+        </section>
+
+
+
+            
+            <section id="gallery" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-amber-600 mb-8">Our Gallery</h2>
+
+            <!-- Tabs -->
+            <div class="flex justify-center mb-8 space-x-4">
+            <button class="tab-btn px-4 py-2 bg-amber-600 text-white rounded" data-tab="all">All</button>
+            <button class="tab-btn px-4 py-2 bg-amber-600 text-white rounded" data-tab="children">Children</button>
+            <button class="tab-btn px-4 py-2 bg-amber-600 text-white rounded" data-tab="youth">Youth</button>
+            <button class="tab-btn px-4 py-2 bg-amber-600 text-white rounded" data-tab="community">Community</button>
+            <button class="tab-btn px-4 py-2 bg-amber-600 text-white rounded" data-tab="advocacy">Advocacy</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <!-- Each gallery item includes a data-category -->
+            <div class="gallery-item" data-category="children">
+                <img src="images/Cover/Cover/4.jpg" alt="Charity work" class="w-full h-48 object-cover rounded-lg shadow-md">
+            
+            </div>
+            <div class="gallery-item" data-category="children">
+                <img src="images/Gallery/Gallery/child 2.jpg" alt="Elderly care" class="w-full h-48 object-cover rounded-lg shadow-md">
+
+            </div>
+            <div class="gallery-item" data-category="youth">
+                <img src="images/Gallery/Gallery/charity.jpg" alt="Team building" class="w-full h-48 object-cover rounded-lg shadow-md">
+                
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="images/Gallery/Gallery/dc 2.jpg" alt="Fundraising" class="w-full h-48 object-cover rounded-lg shadow-md">
+
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="images/Gallery/Gallery/Comm 3.jpg" alt="Community service" class="w-full h-48 object-cover rounded-lg shadow-md">
+
+            </div>
+            <div class="gallery-item" data-category="youth">
+                <img src="images/Gallery/Gallery/Anni 1.jpg" alt="Youth empowerment" class="w-full h-48 object-cover rounded-lg shadow-md">
+                
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="images/Gallery/Gallery/DSC_0104.JPG" alt="School" class="w-full h-48 object-cover rounded-lg shadow-md">
+            
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="images/Gallery/Gallery/Anni 3.jpg" alt="Anniversary" class="w-full h-48 object-cover rounded-lg shadow-md">
+                
+            </div>
+            <div class="gallery-item" data-category="community">
+                <img src="images/Gallery/Gallery/Youth 1.jpg" alt="Tree planting" class="w-full h-48 object-cover rounded-lg shadow-md">
+                
+            </div>
+            <div class="gallery-item" data-category="advocacy">
+                <img src="images/Gallery/Gallery/comm 6.jpg" alt="Workshop" class="w-full h-48 object-cover rounded-lg shadow-md">
+
+            </div>
+            <div class="gallery-item" data-category="youth">
+                <img src="images/Gallery/Gallery/youth 2.jpg" alt="Dialogues" class="w-full h-48 object-cover rounded-lg shadow-md">
+                
+            </div>
+            <div class="gallery-item" data-category="advocacy">
+                <img src="images/Gallery/Gallery/Advocacy.jpg" alt="Peer education" class="w-full h-48 object-cover rounded-lg shadow-md">
+            </div>
+            </div>
+        </div>
+</section>
+
+
+    <!-- Team Section -->
+<section id="team" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+        <p class="text-sm text-black text-center font-bold">Hearts Behind the Mission</p>
+        <h2 class="text-3xl font-bold text-center text-amber-600 mb-12">Meet The Golden Heart Team</h2>
+        
+        <!-- Team Slider Container -->
+        <div class="relative">
+            <!-- Slider Navigation -->
+            <button class="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-amber-600 text-white p-2 rounded-full shadow-md hover:bg-amber-700 transition ml-2 team-slider-prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 bg-amber-600 text-white p-2 rounded-full shadow-md hover:bg-amber-700 transition mr-2 team-slider-next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            
+            <!-- Team Members Slider -->
+            <div class="team-slider overflow-hidden">
+                <div class="team-slider-track flex transition-transform duration-300 ease-in-out">
+                    <!-- CEO -->
+                    <div class="team-slide bg-white p-6 rounded-lg shadow-md text-center flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-2 border-amber-600">
+                            <img src="images/Leaders/Leaders/Vonah 1.jpg" alt="Elizabeth Khisa" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1">Executive Officer</h3>
+                        <p class="text-gray-600 mb-4">Elizabeth Khisa</p>
+                    </div>
+                    
+                    <!-- Chairperson -->
+                    <div class="team-slide bg-white p-6 rounded-lg shadow-md text-center flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-2 border-amber-600">
+                            <img src="images/Leaders/Leaders/Ivan.jpg" alt="Ivan OKabero" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1">Chairperson</h3>
+                        <p class="text-gray-600 mb-4">Ivan OKabero</p>
+                    </div>
+                    
+                    <!-- Executive Assistant -->
+                    <div class="team-slide bg-white p-6 rounded-lg shadow-md text-center flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-2 border-amber-600">
+                            <img src="images/Leaders/Leaders/Doreen.jpg" alt="Doreen Khivali" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1">Executive Assistant</h3>
+                        <p class="text-gray-600 mb-4">Doreen Khivali</p>
+                    </div>
+
+                    <!-- Deputy Executive Assistant --> 
+                    <div class="team-slide bg-white p-6 rounded-lg shadow-md text-center flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-2 border-amber-600">
+                            <img src="images/Leaders/Leaders/Silah.jpg" alt="Silah Ojiambo" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1">Deputy Executive Assistant</h3>
+                        <p class="text-gray-600 mb-4">Silah Ojiambo</p>
+                    </div>
+                    
+                    <!-- Programs Coordinator -->
+                    <div class="team-slide bg-white p-6 rounded-lg shadow-md text-center flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-2 border-amber-600">
+                            <img src="images/Leaders/Leaders/Eli (2).jpg" alt="Elias Illa" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1">Programs Coordinator</h3>
+                        <p class="text-gray-600 mb-4">Elias Illa</p>              
+                    </div>
+                    
+                    <!-- Finance Lead -->
+                    <div class="team-slide bg-white p-6 rounded-lg shadow-md text-center flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-2 border-amber-600">
+                            <img src="images/Leaders/Leaders/Ruby (2).jpg" alt="Ruby Rose" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1">Finance Lead</h3>
+                        <p class="text-gray-600 mb-4">Ruby Rose</p>   
+                    </div>
+                    
+                    <!-- Media & Communications Lead -->
+                    <div class="team-slide bg-white p-6 rounded-lg shadow-md text-center flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-2 border-amber-600">
+                            <img src="images/Leaders/Leaders/Shakii.jpg" alt="Shakira Omata" class="w-full h-full object-cover">
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1">Outreach Coordinator</h3>
+                        <p class="text-gray-600 mb-4">Shakira Omata</p>
+                    </div>
+                    
+                    <!-- Regional Coordinators -->
+                    <div class="team-slide bg-white p-6 rounded-lg shadow-md text-center flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
+                        <div class="w-48 h-48 mx-auto mb-4 rounded-full bg-gray-300 flex items-center justify-center text-4xl text-amber-600">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-1">The Committee</h3>
+                        <p class="text-gray-600 mb-4">Regional Coordinators</p>
+                       <ol class="text-sm text-gray-700 space-y-2 pl-5">
+                           <li class="flex justify-between">
+                               <span class="font-medium">Brandine Anyolo</span>
+                               <span class="text-gray-500">Kakamega/Kisumu</span>
+                           </li>
+                           <li class="flex justify-between">
+                               <span class="font-medium">Victor Kiplimo</span>
+                               <span class="text-gray-500">Baringo/Uasin Gishu</span>
+                           </li>
+                           <li class="flex justify-between">
+                               <span class="font-medium">Pienziah Kuloba</span>
+                               <span class="text-gray-500">Nairobi/Kiambu</span>
+                           </li>
+                           <li class="flex justify-between">
+                               <span class="font-medium">Shadrack Olwande</span>
+                               <span class="text-gray-500">Kitale</span>
+                           </li>
+                           <li class="flex justify-between">
+                               <span class="font-medium">Oscar Muvali</span>
+                               <span class="text-gray-500">Kitui</span>
+                           </li>
+                       </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Indicators -->
+            <div class="flex justify-center mt-4 space-x-2 team-slider-indicators">
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="fixed top-6 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-3 rounded-lg shadow-md opacity-0 transition-opacity duration-300 pointer-events-none z-50">
+      Thank you! Your message has been received.
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-800 text-white" data-aos="zoom-out">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="zoom-out" data-aos-delay="100">Contact Us</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2" data-aos="zoom-out" data-aos-delay="200">
+                    <h3 class="text-xl font-semibold mb-4">Get In Touch</h3>
+                    <form id="contact-form" class="space-y-4">
+                      <input type="hidden" name="_captcha" value="false">
+                      <input type="hidden" name="_template" value="box">
+               <div data-aos="zoom-out" data-aos-delay="300">
+                   <label for="name" class="block mb-1">Name</label>
+                   <input type="text" id="name" name="name" required class="w-full px-4 py-2 rounded text-gray-800">
+              </div>
+              <div data-aos="zoom-out" data-aos-delay="400">
+                <label for="email" class="block mb-1">Email</label>
+                <input type="email" id="email" name="email" required class="w-full px-4 py-2 rounded text-gray-800">
+              </div>
+              <div data-aos="zoom-out" data-aos-delay="500">
+                <label for="message" class="block mb-1">Message</label>
+                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 rounded text-gray-800"></textarea>
+             </div>
+             <button type="submit" class="bg-white text-amber-600 px-6 py-3 rounded-lg font-bold hover:bg-amber-100 transition" data-aos="zoom-out" data-aos-delay="600">Send Message</button>
+          </form>
+
+                </div>
+                <div class="md:w-1/2" data-aos="zoom-out" data-aos-delay="250">
+                    <h3 class="text-xl font-semibold mb-4">Connect With Us</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start" data-aos="zoom-out" data-aos-delay="350">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-medium">Location</h4>
+                                <p>Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start" data-aos="zoom-out" data-aos-delay="450">
+                            <i class="fas fa-phone-alt mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-medium">Phone</h4>
+                                <p>+254 797870821</p>
+                                <p>+254 723364428</p>
+                                <p>+254 113768580</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start" data-aos="zoom-out" data-aos-delay="550">
+                            <i class="fas fa-envelope mt-1 mr-3 text-xl"></i>
+                            <div>
+                                <h4 class="font-medium">Email</h4>
+                                <p>goldenheartmovement@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8" data-aos="zoom-out" data-aos-delay="650">
+                        <h4 class="font-medium mb-3">Follow Us</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-2xl hover:text-amber-200 transition" data-aos="zoom-out" data-aos-delay="700">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                            <a href="https://www.instagram.com/_ghm.254?igsh=MXJmZjFhcmZqMXl2ZQ==" class="text-2xl hover:text-amber-200 transition" data-aos="zoom-out" data-aos-delay="750">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="text-2xl hover:text-amber-200 transition" data-aos="zoom-out" data-aos-delay="800">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Success Popup -->
+    <div id="success-popup" class="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 hidden">
+     <div class="bg-white p-6 rounded-xl shadow-xl text-center max-w-sm">
+      <h2 class="text-xl font-bold text-amber-600 mb-2">Message Sent!</h2>
+      <p class="text-gray-700">Thank you for reaching out. Redirecting you shortly...</p>
+    </div>
+   </div>
+
+    <!-- Footer -->
+    <footer class="bg-amber-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-heart text-2xl"></i>
+                        <span class="text-xl font-bold">Golden Heart Movement</span>
+                    </div>
+                    <p class="mt-2">Touching Lives</p>
+                </div>
+                <div class="text-center md:text-right">
+                    <p>&copy; <span id="year"></span> Golden Heart Movement. All rights reserved.</p>
+                   
+                </div>
+            </div>
+        </div>
+    </footer>
+<script src="script.js" defer></script>
+</body>
+</html>
