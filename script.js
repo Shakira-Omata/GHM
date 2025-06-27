@@ -181,30 +181,6 @@ function showToast(message) {
   }, 3000);
 }
 
-const tabs = document.querySelectorAll(".tab-btn");
-  const items = document.querySelectorAll(".gallery-item");
-
-  tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
-      const selected = tab.getAttribute("data-tab");
-
-      tabs.forEach(t => t.classList.remove("bg-amber-600", "text-white"));
-      tab.classList.add("bg-amber-600", "text-white");
-
-      items.forEach(item => {
-        const category = item.getAttribute("data-category");
-        item.style.display = (selected === "all" || selected === category) ? "block" : "none";
-      });
-    });
-  });
-
-  // Initialize with 'All' visible
-  document.querySelector('.tab-btn[data-tab="all"]').click();
-
-   document.getElementById('partnerButton').addEventListener('click', function() {
-        const form = document.getElementById('partnerForm');
-        form.classList.toggle('hidden');
-    });
 
     // Partnership Form Submission
 const partnershipForm = document.getElementById('partnership-form');
