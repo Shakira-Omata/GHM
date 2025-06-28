@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Paystack Integration
     let handler = PaystackPop.setup({
-      key: 'pk_test_xxxxxxxxxxxxxxxxxx', // Replace with your real Paystack public key
+      key: 'pk_test_1816638ca2eae0a6830151029323a4bceb7ad291', // Replace with your real Paystack public key
       email: email,
       amount: amount,
       currency: "KES",
