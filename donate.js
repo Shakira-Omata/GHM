@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return;
     }
 
-    // Build your Paystack payment page URL (with optional params)
+    // Build your Paystack payment page URL
     const paystackURL = new URL("https://paystack.shop/pay/golden-heart");
     paystackURL.searchParams.append("name", name);
     paystackURL.searchParams.append("email", email);
@@ -29,15 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     paystackURL.searchParams.append("notes", notes);
     paystackURL.searchParams.append("method", paymentMethod);
 
-    // Open Paystack payment page in a new tab
-    const paystackWindow = window.open(paystackURL.toString(), "_blank");
-
-    // Listen for Paystack window close — when closed, redirect back to homepage
-    const pollTimer = window.setInterval(function () {
-      if (paystackWindow.closed) {
-        window.clearInterval(pollTimer);
-        window.location.href = "index.html"; // ✅ Redirect to your homepage
-      }
-    }, 500);
+    // Open in a new tab
+    window.open(paystackURL.toString(), "_blank");
   });
 });
