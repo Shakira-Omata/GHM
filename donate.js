@@ -29,7 +29,15 @@ document.addEventListener("DOMContentLoaded", function () {
     paystackURL.searchParams.append("notes", notes);
     paystackURL.searchParams.append("method", paymentMethod);
 
-    // Open in a new tab
-    window.open(paystackURL.toString(), "_blank");
+    // Open Paystack payment page in a new tab
+    const paystackWindow = window.open(paystackURL.toString(), "_blank");
+
+    // Listen for Paystack window close — when closed, redirect back to homepage
+    const pollTimer = window.setInterval(function () {
+      if (paystackWindow.closed) {
+        window.clearInterval(pollTimer);
+        window.location.href = "index.html"; // ✅ Redirect to your homepage
+      }
+    }, 500);
   });
 });
