@@ -340,6 +340,9 @@ document.addEventListener("DOMContentLoaded", function () {
       callback: function (response) {
         // ✅ Redirect to success page with reference
         window.location.href = "success.html?ref=" + response.reference;
+        setTimeout(function() {
+      window.location.href = "index.html"; // or your home page URL
+    }, 60000); // 60000 milliseconds = 1 minute
       },
       onClose: function () {
         alert("Transaction was cancelled.");
