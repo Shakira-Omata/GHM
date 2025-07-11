@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", function () {
         // ✅ Redirect to success page with reference
         window.location.href = "success.html?ref=" + response.reference;
         setTimeout(function() {
-      window.location.href = "index.html"; // or your home page URL
+      window.location.href = "index.html#home"; // or your home page URL
     }, 4000); // 4000 milliseconds = 4 seconds
       },
       onClose: function () {

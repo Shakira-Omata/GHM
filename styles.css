@@ -65,7 +65,8 @@
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
 }
 
-.hidden { display: none !important; }
+.hidden { display: none; }
+
 /* Logo Image Styling */
         .logo-img {
             height: 40px;
