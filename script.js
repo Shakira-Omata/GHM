@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function () {
         window.location.href = "success.html?ref=" + response.reference;
         setTimeout(function() {
       window.location.href = "index.html"; // or your home page URL
-    }, 60000); // 60000 milliseconds = 1 minute
+    }, 4000); // 4000 milliseconds = 4 seconds
       },
       onClose: function () {
         alert("Transaction was cancelled.");
