@@ -512,14 +512,14 @@
 
 
             
-          <section id="gallery" class="py-16 bg-white">
+<section id="gallery" class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <h2 class="text-3xl font-bold text-center text-amber-600 mb-8">Our Gallery</h2>
         <p class="text-center mb-12">Explore the moments that define our mission and impact.</p>
 
         <!-- Gallery Grid -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <!-- Gallery items -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="gallery-grid">
+            <!-- First 3 gallery items will be shown by default -->
             <div class="gallery-item">
                 <img src="images/Cover/Cover/4.jpg" alt="Charity work" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
@@ -529,57 +529,82 @@
             <div class="gallery-item">
                 <img src="images/Cover/Cover/3.jpg" alt="Community service" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            
+            
+            <!-- Remaining gallery items (hidden initially) -->
+             <div class="gallery-item">
                 <img src="images/Cover/Cover/child 3.jpg" alt="Health camp" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/child 5.jpg" alt="Food distribution" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/charity.jpg" alt="Team building" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Cover/Cover/child 4.jpg" alt="Community outreach" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/dc 2.jpg" alt="Fundraising" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/Community 1.jpg" alt="Community service" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/comm 8.jpg" alt="Youth empowerment" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/td 5.jpg" alt="School" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/Anni 3.jpg" alt="Anniversary" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/Youth 1.jpg" alt="Tree planting" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/comm 6.jpg" alt="Workshop" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/youth 2.jpg" alt="Dialogues" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/Advocacy.jpg" alt="Peer education" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/ted.jpg" alt="Community outreach" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/youth.jpg" alt="Health camp" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/Youth 5.jpg" alt="Food distribution" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
-            <div class="gallery-item">
+            <div class="gallery-item hidden">
                 <img src="images/Gallery/Gallery/TED_0490[1].JPG" alt="Community event" class="w-full h-48 object-cover rounded-lg shadow-md">
             </div>
+            <div class="gallery-item hidden">
+                <img src="images/Gallery/Gallery/T1.jpg" alt="Community event" class="w-full h-48 object-cover rounded-lg shadow-md">
+            </div>
+            <div class="gallery-item hidden">
+                <img src="images/Gallery/Gallery/T4.jpg" alt="Community event" class="w-full h-48 object-cover rounded-lg shadow-md">
+            </div>
+            <div class="gallery-item hidden">
+                <img src="images/Gallery/Gallery/T6.jpg" alt="Community event" class="w-full h-48 object-cover rounded-lg shadow-md">
+            </div>
+            <div class="gallery-item hidden">
+                <img src="images/Gallery/Gallery/T5.jpg" alt="Community event" class="w-full h-48 object-cover rounded-lg shadow-md">
+            </div>
+        </div>
+        
+        <!-- Load More Button -->
+        <div class="text-center mt-8">
+            <button id="load-more-btn" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                Expand Gallery
+            </button>
+           <button id="show-less-btn" class="hidden bg-black hover:bg-amber-600 text-white font-bold py-2 px-6 rounded-full transition duration-300">
+                Show Less
+            </button>
         </div>
     </div>
 </section>
@@ -660,7 +685,7 @@
                     <!-- Media & Communications Lead -->
                     <div class="team-slide bg-white p-6 rounded-lg shadow-md text-center flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4">
                         <div class="w-48 h-48 mx-auto mb-4 rounded-full overflow-hidden border-2 border-amber-600">
-                            <img src="images/Leaders/Leaders/Shakii.jpg" alt="Shakira Omata" class="w-full h-full object-cover">
+                            <img src="images/Leaders/Leaders/Shak.jpg" alt="Shakira Omata" class="w-full h-full object-cover">
                         </div>
                         <h3 class="text-xl font-semibold mb-1">Outreach Coordinator</h3>
                         <p class="text-gray-600 mb-4">Shakira Omata</p>
