@@ -238,7 +238,7 @@ if (partnershipForm) {
 });
 
 /* Payments */
-document.addEventListener("DOMContentLoaded", function () {
+ddocument.addEventListener("DOMContentLoaded", function () {
   // === Donation Form Handler ===
   const form = document.getElementById("donation-form");
 
@@ -264,56 +264,36 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Paystack Inline Payment
     let handler = PaystackPop.setup({
-      key: 'pk_live_b865485d6437b47df8bb7db749d5f0bb2ac5bdd7', // live 
+      key: 'pk_live_b865485d6437b47df8bb7db749d5f0bb2ac5bdd7', // real public key
       email: email,
       amount: amount,
-      currency: "KES", // Or NGN if you're in Nigeria
+      currency: "KES", // Or NGN if in Nigeria
       metadata: {
         custom_fields: [
-          {
-            display_name: "Donor Name",
-            variable_name: "donor_name",
-            value: name,
-          },
-          {
-            display_name: "Phone Number",
-            variable_name: "phone",
-            value: phone,
-          },
-          {
-            display_name: "Donation Type",
-            variable_name: "donation_type",
-            value: donationType,
-          },
-          {
-            display_name: "Note",
-            variable_name: "notes",
-            value: notes,
-          },
-          {
-            display_name: "Payment Method",
-            variable_name: "method",
-            value: paymentMethod,
-          }
+          { display_name: "Donor Name", variable_name: "donor_name", value: name },
+          { display_name: "Phone Number", variable_name: "phone", value: phone },
+          { display_name: "Donation Type", variable_name: "donation_type", value: donationType },
+          { display_name: "Note", variable_name: "notes", value: notes },
+          { display_name: "Payment Method", variable_name: "method", value: paymentMethod }
         ]
       },
       callback: function (response) {
-        // ✅ Redirect to your homepage in same tab
-        window.location.href = "https://shakira-omata.github.io/GHM/" + response.reference;
+        // ✅ Go to success.html and pass reference
+        window.location.href = "success.html?ref=" + response.reference;
       },
       onClose: function () {
         alert("Transaction was cancelled.");
       }
     });
 
-    handler.openIframe(); // Open payment inline
+    handler.openIframe(); // Show Paystack popup inline
   });
 
   // === Partner Form Toggle ===
   const partnerButton = document.getElementById("partnerButton");
   const partnerForm = document.getElementById("partnerForm");
 
-  partnerButton.addEventListener("click", function () {
+  partnerButton?.addEventListener("click", function () {
     partnerForm.classList.toggle("hidden");
   });
 });
