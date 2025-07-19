@@ -286,39 +286,47 @@ if (partnershipForm) {
 
 });
 
+<<<<<<< HEAD
 
+=======
+/* Payments */
+>>>>>>> 461fc42 (Updated Paystack integration and redirection logic)
 document.addEventListener("DOMContentLoaded", function () {
+  // === Donation Form Handler ===
   const form = document.getElementById("donation-form");
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Get values
+    // Get form values
     const name = document.getElementById("donorName").value.trim();
     const email = document.getElementById("donorEmail").value.trim();
     const phone = document.getElementById("donorPhone").value.trim();
-    const amount = parseFloat(document.getElementById("donationAmount").value.trim()) * 100; // Convert to kobo
+    const amountRaw = document.getElementById("donationAmount").value.trim();
     const donationType = document.getElementById("donation-type").value;
     const notes = document.getElementById("notes").value.trim();
     const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value;
 
-    if (!paymentMethod || !amount || !email || !name) {
+    // Validate inputs
+    if (!name || !email || !phone || !amountRaw || !donationType || !paymentMethod) {
       alert("Please complete all required fields.");
       return;
     }
 
-    // Paystack Integration
+    const amount = parseFloat(amountRaw) * 100; // Convert to kobo
+
+    // Paystack Inline Payment
     let handler = PaystackPop.setup({
-      key: 'pk_test_1816638ca2eae0a6830151029323a4bceb7ad291', // Replace with your real Paystack public key
+      key: 'pk_live_b865485d6437b47df8bb7db749d5f0bb2ac5bdd7', // live 
       email: email,
       amount: amount,
-      currency: "KES",
+      currency: "KES", // Or NGN if you're in Nigeria
       metadata: {
         custom_fields: [
           {
-            display_name: name,
-            variable_name: "donation_type",
-            value: donationType,
+            display_name: "Donor Name",
+            variable_name: "donor_name",
+            value: name,
           },
           {
             display_name: "Phone Number",
@@ -326,40 +334,47 @@ document.addEventListener("DOMContentLoaded", function () {
             value: phone,
           },
           {
+            display_name: "Donation Type",
+            variable_name: "donation_type",
+            value: donationType,
+          },
+          {
             display_name: "Note",
-            variable_name: "dedication_note",
+            variable_name: "notes",
             value: notes,
           },
           {
             display_name: "Payment Method",
             variable_name: "method",
-            value: paymentMethod
+            value: paymentMethod,
           }
-        ],
+        ]
       },
       callback: function (response) {
+<<<<<<< HEAD
         // ✅ Redirect to success page with reference
         window.location.href = "success.html?ref=" + response.reference;
         setTimeout(function() {
       window.location.href = "index.html#home"; // or your home page URL
     }, 3000); // 3000 milliseconds = 3 seconds
+=======
+        // ✅ Redirect to your homepage in same tab
+        window.location.href = "https://ghm-flax.vercel.app/?ref=" + response.reference;
+>>>>>>> 461fc42 (Updated Paystack integration and redirection logic)
       },
       onClose: function () {
         alert("Transaction was cancelled.");
       }
     });
 
-    handler.openIframe();
+    handler.openIframe(); // Open payment inline
+  });
+
+  // === Partner Form Toggle ===
+  const partnerButton = document.getElementById("partnerButton");
+  const partnerForm = document.getElementById("partnerForm");
+
+  partnerButton.addEventListener("click", function () {
+    partnerForm.classList.toggle("hidden");
   });
 });
-
-
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const partnerButton = document.getElementById("partnerButton");
-      const partnerForm = document.getElementById("partnerForm");
-
-      partnerButton.addEventListener("click", function () {
-        partnerForm.classList.toggle("hidden");
-      });
-    });
