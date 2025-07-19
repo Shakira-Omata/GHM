@@ -297,3 +297,6 @@ ddocument.addEventListener("DOMContentLoaded", function () {
     partnerForm.classList.toggle("hidden");
   });
 });
+
+
+

@@ -837,4 +837,15 @@
 <!-- Paystack Inline Script -->
 <script src="https://js.paystack.co/v1/inline.js"></script>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const partnerButton = document.getElementById("partnerButton");
+    const partnerForm = document.getElementById("partnerForm");
+
+    partnerButton.addEventListener("click", function () {
+      partnerForm.classList.toggle("hidden");
+    });
+  });
+</script>
+
 </body>
