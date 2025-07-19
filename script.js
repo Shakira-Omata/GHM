@@ -30,55 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-   // Gallery Load More/Show Less functionality
-    const loadMoreBtn = document.getElementById('load-more-btn');
-    const showLessBtn = document.getElementById('show-less-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    let itemsToShow = 3; // Initial number of items to show
-    const itemsPerLoad = 3; // Number of items to add each time
-
-    if (loadMoreBtn && showLessBtn) {
-        // Load More button click handler
-        loadMoreBtn.addEventListener('click', function() {
-            // Show next set of items
-            for (let i = itemsToShow; i < itemsToShow + itemsPerLoad && i < galleryItems.length; i++) {
-                galleryItems[i].classList.remove('hidden');
-            }
-            
-            itemsToShow += itemsPerLoad;
-            
-            // Show the Show Less button when we've loaded more than initial
-            if (itemsToShow > 4) {
-                showLessBtn.classList.remove('hidden');
-            }
-            
-            // Hide Load More button if all items are visible
-            if (itemsToShow >= galleryItems.length) {
-                loadMoreBtn.classList.add('hidden');
-            }
-        });
-        
-        // Show Less button click handler
-        showLessBtn.addEventListener('click', function() {
-            // Hide items beyond the initial 3
-            for (let i = 3; i < galleryItems.length; i++) {
-                galleryItems[i].classList.add('hidden');
-            }
-            
-            itemsToShow = 3;
-            
-            // Show Load More button and hide Show Less button
-            loadMoreBtn.classList.remove('hidden');
-            showLessBtn.classList.add('hidden');
-        });
-        
-        // Initially hide buttons if not needed
-        if (galleryItems.length <= 3) {
-            loadMoreBtn.classList.add('hidden');
-            showLessBtn.classList.add('hidden');
-        }
-    }
-
    //Hero Image Slideshow
         let currentSlideIndex = 0;
         const slides = document.querySelectorAll('.hero-slide');
@@ -286,11 +237,7 @@ if (partnershipForm) {
 
 });
 
-<<<<<<< HEAD
-
-=======
 /* Payments */
->>>>>>> 461fc42 (Updated Paystack integration and redirection logic)
 document.addEventListener("DOMContentLoaded", function () {
   // === Donation Form Handler ===
   const form = document.getElementById("donation-form");
@@ -351,16 +298,8 @@ document.addEventListener("DOMContentLoaded", function () {
         ]
       },
       callback: function (response) {
-<<<<<<< HEAD
-        // ✅ Redirect to success page with reference
-        window.location.href = "success.html?ref=" + response.reference;
-        setTimeout(function() {
-      window.location.href = "index.html#home"; // or your home page URL
-    }, 3000); // 3000 milliseconds = 3 seconds
-=======
         // ✅ Redirect to your homepage in same tab
-        window.location.href = "https://ghm-flax.vercel.app/?ref=" + response.reference;
->>>>>>> 461fc42 (Updated Paystack integration and redirection logic)
+        window.location.href = "https://shakira-omata.github.io/GHM/" + response.reference;
       },
       onClose: function () {
         alert("Transaction was cancelled.");
