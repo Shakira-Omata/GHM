@@ -238,65 +238,56 @@ if (partnershipForm) {
 });
 
 /* Payments */
-ddocument.addEventListener("DOMContentLoaded", function () {
-  // === Donation Form Handler ===
-  const form = document.getElementById("donation-form");
+document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("donation-form");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    // Get form values
-    const name = document.getElementById("donorName").value.trim();
-    const email = document.getElementById("donorEmail").value.trim();
-    const phone = document.getElementById("donorPhone").value.trim();
-    const amountRaw = document.getElementById("donationAmount").value.trim();
-    const donationType = document.getElementById("donation-type").value;
-    const notes = document.getElementById("notes").value.trim();
-    const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value;
-
-    // Validate inputs
-    if (!name || !email || !phone || !amountRaw || !donationType || !paymentMethod) {
-      alert("Please complete all required fields.");
-      return;
-    }
-
-    const amount = parseFloat(amountRaw) * 100; // Convert to kobo
-
-    // Paystack Inline Payment
-    let handler = PaystackPop.setup({
-      key: 'pk_live_b865485d6437b47df8bb7db749d5f0bb2ac5bdd7', // real public key
-      email: email,
-      amount: amount,
-      currency: "KES", // Or NGN if in Nigeria
-      metadata: {
-        custom_fields: [
-          { display_name: "Donor Name", variable_name: "donor_name", value: name },
-          { display_name: "Phone Number", variable_name: "phone", value: phone },
-          { display_name: "Donation Type", variable_name: "donation_type", value: donationType },
-          { display_name: "Note", variable_name: "notes", value: notes },
-          { display_name: "Payment Method", variable_name: "method", value: paymentMethod }
-        ]
-      },
-      callback: function (response) {
-        // ✅ Go to success.html and pass reference
-        window.location.href = "success.html?ref=" + response.reference;
-      },
-      onClose: function () {
-        alert("Transaction was cancelled.");
+      if (!form) {
+        console.error("Form not found!");
+        return;
       }
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("donorName").value.trim();
+        const email = document.getElementById("donorEmail").value.trim();
+        const phone = document.getElementById("donorPhone").value.trim();
+        const amountRaw = document.getElementById("donationAmount").value.trim();
+        const donationType = document.getElementById("donation-type").value;
+        const notes = document.getElementById("notes").value.trim();
+        const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value;
+
+        if (!name || !email || !phone || !amountRaw || !donationType || !paymentMethod) {
+          alert("Please complete all required fields.");
+          return;
+        }
+
+        const amount = parseFloat(amountRaw) * 100;
+
+        const handler = PaystackPop.setup({
+          key: 'pk_live_b865485d6437b47df8bb7db749d5f0bb2ac5bdd7',
+          email: email,
+          amount: amount,
+          currency: "KES",
+          metadata: {
+            custom_fields: [
+              { display_name: "Donor Name", variable_name: "donor_name", value: name },
+              { display_name: "Phone Number", variable_name: "phone", value: phone },
+              { display_name: "Donation Type", variable_name: "donation_type", value: donationType },
+              { display_name: "Note", variable_name: "notes", value: notes },
+              { display_name: "Payment Method", variable_name: "method", value: paymentMethod }
+            ]
+          },
+          callback: function (response) {
+            window.location.href = "success.html?ref=" + response.reference;
+          },
+          onClose: function () {
+            alert("Transaction was cancelled.");
+          }
+        });
+
+        handler.openIframe();
+      });
     });
-
-    handler.openIframe(); // Show Paystack popup inline
-  });
-
-  // === Partner Form Toggle ===
-  const partnerButton = document.getElementById("partnerButton");
-  const partnerForm = document.getElementById("partnerForm");
-
-  partnerButton?.addEventListener("click", function () {
-    partnerForm.classList.toggle("hidden");
-  });
-});
-
 
 
