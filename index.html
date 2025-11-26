@@ -960,9 +960,47 @@
             </div>
         </div>
     </footer>
+
+    <script src="https://js.paystack.co/v1/inline.js"></script>
 <script src="script.js" defer></script>
 <!-- Paystack Inline Script -->
-<script src="https://js.paystack.co/v1/inline.js"></script>
-<script src="donate.js" defer></script> <!-- Link to external JavaScript -->
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const partnerButton = document.getElementById("partnerButton");
+    const partnerForm = document.getElementById("partnerForm");
+
+    partnerButton.addEventListener("click", function () {
+      partnerForm.classList.toggle("hidden");
+    });
+  });
+</script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const loadMoreBtn = document.getElementById("load-more-btn");
+    const showLessBtn = document.getElementById("show-less-btn");
+    const hiddenItems = document.querySelectorAll("#gallery-grid .gallery-item.hidden");
+
+    loadMoreBtn.addEventListener("click", function () {
+      hiddenItems.forEach(item => item.classList.remove("hidden"));
+      loadMoreBtn.classList.add("hidden");
+      showLessBtn.classList.remove("hidden");
+    });
+
+    showLessBtn.addEventListener("click", function () {
+      hiddenItems.forEach(item => item.classList.add("hidden"));
+      loadMoreBtn.classList.remove("hidden");
+      showLessBtn.classList.add("hidden");
+      window.scrollTo({
+        top: document.getElementById("gallery").offsetTop,
+        behavior: "smooth"
+      });
+    });
+  });
+</script>
+
 
 </body>

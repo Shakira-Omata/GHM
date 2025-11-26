@@ -17,6 +17,11 @@
       font-size: 4rem;
       color: #28a745;
     }
+    .redirect-note {
+      margin-top: 20px;
+      font-style: italic;
+      color: #6c757d;
+    }
   </style>
 </head>
 <body>
@@ -30,18 +35,19 @@
       <p class="lead">Your generosity is making a big difference.</p>
       <p><strong>Transaction Reference:</strong> <span id="tx-ref" class="text-primary"></span></p>
       <a href="index.html" class="btn btn-warning mt-3 fw-bold">Go Back Home</a>
+      <p class="redirect-note">Redirecting you to the homepage shortly...</p>
     </div>
   </div>
 
   <script>
-    // Get transaction ref from query string
     const urlParams = new URLSearchParams(window.location.search);
     const reference = urlParams.get('ref');
-    if (reference) {
-      document.getElementById('tx-ref').textContent = reference;
-    } else {
-      document.getElementById('tx-ref').textContent = "Unavailable";
-    }
+    document.getElementById('tx-ref').textContent = reference || "Unavailable";
+
+    // Auto-redirect after 10 seconds
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 10000);
   </script>
 
 </body>

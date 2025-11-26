@@ -30,55 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-   // Gallery Load More/Show Less functionality
-    const loadMoreBtn = document.getElementById('load-more-btn');
-    const showLessBtn = document.getElementById('show-less-btn');
-    const galleryItems = document.querySelectorAll('.gallery-item');
-    let itemsToShow = 3; // Initial number of items to show
-    const itemsPerLoad = 3; // Number of items to add each time
-
-    if (loadMoreBtn && showLessBtn) {
-        // Load More button click handler
-        loadMoreBtn.addEventListener('click', function() {
-            // Show next set of items
-            for (let i = itemsToShow; i < itemsToShow + itemsPerLoad && i < galleryItems.length; i++) {
-                galleryItems[i].classList.remove('hidden');
-            }
-            
-            itemsToShow += itemsPerLoad;
-            
-            // Show the Show Less button when we've loaded more than initial
-            if (itemsToShow > 4) {
-                showLessBtn.classList.remove('hidden');
-            }
-            
-            // Hide Load More button if all items are visible
-            if (itemsToShow >= galleryItems.length) {
-                loadMoreBtn.classList.add('hidden');
-            }
-        });
-        
-        // Show Less button click handler
-        showLessBtn.addEventListener('click', function() {
-            // Hide items beyond the initial 3
-            for (let i = 3; i < galleryItems.length; i++) {
-                galleryItems[i].classList.add('hidden');
-            }
-            
-            itemsToShow = 3;
-            
-            // Show Load More button and hide Show Less button
-            loadMoreBtn.classList.remove('hidden');
-            showLessBtn.classList.add('hidden');
-        });
-        
-        // Initially hide buttons if not needed
-        if (galleryItems.length <= 3) {
-            loadMoreBtn.classList.add('hidden');
-            showLessBtn.classList.add('hidden');
-        }
-    }
-
    //Hero Image Slideshow
         let currentSlideIndex = 0;
         const slides = document.querySelectorAll('.hero-slide');
@@ -286,80 +237,57 @@ if (partnershipForm) {
 
 });
 
-
+/* Payments */
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("donation-form");
+      const form = document.getElementById("donation-form");
 
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    // Get values
-    const name = document.getElementById("donorName").value.trim();
-    const email = document.getElementById("donorEmail").value.trim();
-    const phone = document.getElementById("donorPhone").value.trim();
-    const amount = parseFloat(document.getElementById("donationAmount").value.trim()) * 100; // Convert to kobo
-    const donationType = document.getElementById("donation-type").value;
-    const notes = document.getElementById("notes").value.trim();
-    const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value;
-
-    if (!paymentMethod || !amount || !email || !name) {
-      alert("Please complete all required fields.");
-      return;
-    }
-
-    // Paystack Integration
-    let handler = PaystackPop.setup({
-      key: 'pk_test_1816638ca2eae0a6830151029323a4bceb7ad291', // Replace with your real Paystack public key
-      email: email,
-      amount: amount,
-      currency: "KES",
-      metadata: {
-        custom_fields: [
-          {
-            display_name: name,
-            variable_name: "donation_type",
-            value: donationType,
-          },
-          {
-            display_name: "Phone Number",
-            variable_name: "phone",
-            value: phone,
-          },
-          {
-            display_name: "Note",
-            variable_name: "dedication_note",
-            value: notes,
-          },
-          {
-            display_name: "Payment Method",
-            variable_name: "method",
-            value: paymentMethod
-          }
-        ],
-      },
-      callback: function (response) {
-        // ✅ Redirect to success page with reference
-        window.location.href = "success.html?ref=" + response.reference;
-        setTimeout(function() {
-      window.location.href = "index.html#home"; // or your home page URL
-    }, 3000); // 3000 milliseconds = 3 seconds
-      },
-      onClose: function () {
-        alert("Transaction was cancelled.");
+      if (!form) {
+        console.error("Form not found!");
+        return;
       }
-    });
 
-    handler.openIframe();
-  });
-});
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
 
+        const name = document.getElementById("donorName").value.trim();
+        const email = document.getElementById("donorEmail").value.trim();
+        const phone = document.getElementById("donorPhone").value.trim();
+        const amountRaw = document.getElementById("donationAmount").value.trim();
+        const donationType = document.getElementById("donation-type").value;
+        const notes = document.getElementById("notes").value.trim();
+        const paymentMethod = document.querySelector('input[name="payment"]:checked')?.value;
 
+        if (!name || !email || !phone || !amountRaw || !donationType || !paymentMethod) {
+          alert("Please complete all required fields.");
+          return;
+        }
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const partnerButton = document.getElementById("partnerButton");
-      const partnerForm = document.getElementById("partnerForm");
+        const amount = parseFloat(amountRaw) * 100;
 
-      partnerButton.addEventListener("click", function () {
-        partnerForm.classList.toggle("hidden");
+        const handler = PaystackPop.setup({
+          key: 'pk_live_b865485d6437b47df8bb7db749d5f0bb2ac5bdd7',
+          email: email,
+          amount: amount,
+          currency: "KES",
+          metadata: {
+            custom_fields: [
+              { display_name: "Donor Name", variable_name: "donor_name", value: name },
+              { display_name: "Phone Number", variable_name: "phone", value: phone },
+              { display_name: "Donation Type", variable_name: "donation_type", value: donationType },
+              { display_name: "Note", variable_name: "notes", value: notes },
+              { display_name: "Payment Method", variable_name: "method", value: paymentMethod }
+            ]
+          },
+          callback: function (response) {
+            window.location.href = "success.html?ref=" + response.reference;
+          },
+          onClose: function () {
+            alert("Transaction was cancelled.");
+          }
+        });
+
+        handler.openIframe();
       });
     });
+
+
